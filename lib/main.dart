@@ -15,6 +15,29 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      theme: ThemeData(
+        inputDecorationTheme: InputDecorationTheme(
+          enabledBorder: OutlineInputBorder(),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Colors.grey[700],
+              width: 3,
+            ),
+          ),
+          focusedErrorBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Colors.red,
+              width: 3,
+            ),
+          ),
+          errorBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Colors.red,
+              width: 2,
+            ),
+          ),
+        ),
+      ),
       home: MyHomePage(title: 'Formulário de cadastro'),
     );
   }
@@ -69,19 +92,6 @@ class _MyHomePageState extends State<MyHomePage> {
                             Expanded(
                               child: TextFormField(
                                 decoration: InputDecoration(
-                                  enabledBorder: OutlineInputBorder(),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.orange,
-                                      width: 2,
-                                    ),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.red,
-                                      width: 3,
-                                    ),
-                                  ),
                                   hintText: 'Nome completo',
                                 ),
                                 controller: _nomeController,
@@ -103,19 +113,6 @@ class _MyHomePageState extends State<MyHomePage> {
                             Expanded(
                               child: TextFormField(
                                 decoration: InputDecoration(
-                                  enabledBorder: OutlineInputBorder(),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.orange,
-                                      width: 2,
-                                    ),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.red,
-                                      width: 3,
-                                    ),
-                                  ),
                                   hintText: 'E-mail',
                                 ),
                                 controller: _emailController,
@@ -137,19 +134,6 @@ class _MyHomePageState extends State<MyHomePage> {
                             Expanded(
                               child: TextFormField(
                                 decoration: InputDecoration(
-                                  enabledBorder: OutlineInputBorder(),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.orange,
-                                      width: 2,
-                                    ),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.red,
-                                      width: 3,
-                                    ),
-                                  ),
                                   hintText: 'CPF',
                                 ),
                                 controller: _cpfController,
@@ -172,19 +156,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: TextFormField(
                                 controller: _cepController,
                                 decoration: InputDecoration(
-                                  enabledBorder: OutlineInputBorder(),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.orange,
-                                      width: 2,
-                                    ),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.red,
-                                      width: 3,
-                                    ),
-                                  ),
                                   hintText: 'CEP',
                                 ),
                                 validator: (cep) {
@@ -257,19 +228,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: TextFormField(
                                 controller: _ruaController,
                                 decoration: InputDecoration(
-                                  enabledBorder: OutlineInputBorder(),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.orange,
-                                      width: 2,
-                                    ),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.red,
-                                      width: 3,
-                                    ),
-                                  ),
                                   hintText: 'Rua',
                                 ),
                                 validator: (rua) {
@@ -287,19 +245,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: TextFormField(
                                 controller: _numeroController,
                                 decoration: InputDecoration(
-                                  enabledBorder: OutlineInputBorder(),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.orange,
-                                      width: 2,
-                                    ),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.red,
-                                      width: 3,
-                                    ),
-                                  ),
                                   hintText: 'Número',
                                 ),
                                 validator: (numero) {
@@ -320,19 +265,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: TextFormField(
                                 controller: _bairroController,
                                 decoration: InputDecoration(
-                                  enabledBorder: OutlineInputBorder(),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.orange,
-                                      width: 2,
-                                    ),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.red,
-                                      width: 3,
-                                    ),
-                                  ),
                                   hintText: 'Bairro',
                                 ),
                                 validator: (bairro) {
@@ -349,19 +281,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: TextFormField(
                                 controller: _cidadeController,
                                 decoration: InputDecoration(
-                                  enabledBorder: OutlineInputBorder(),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.orange,
-                                      width: 2,
-                                    ),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.red,
-                                      width: 3,
-                                    ),
-                                  ),
                                   hintText: 'Cidade',
                                 ),
                                 validator: (cidade) {
@@ -383,19 +302,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: TextFormField(
                                 controller: _ufController,
                                 decoration: InputDecoration(
-                                  enabledBorder: OutlineInputBorder(),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.orange,
-                                      width: 2,
-                                    ),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.red,
-                                      width: 3,
-                                    ),
-                                  ),
                                   hintText: 'UF',
                                 ),
                                 validator: (uf) {
@@ -413,19 +319,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: TextFormField(
                                 controller: _paisController,
                                 decoration: InputDecoration(
-                                  enabledBorder: OutlineInputBorder(),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.orange,
-                                      width: 2,
-                                    ),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.red,
-                                      width: 3,
-                                    ),
-                                  ),
                                   hintText: 'País',
                                 ),
                                 validator: (pais) {
